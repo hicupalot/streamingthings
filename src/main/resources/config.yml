@@ -1,0 +1,11 @@
+notStaff: "&e[&cStreaming Things&e] &cYou are not Staff so you don't have permission to do this"
+
+notAdmin: "&e[&cStreaming Things&e] &cYou are not an Admin so you don't have permission to do this"
+
+notPlayer: "&e[&cStreaming Things&e] &cYou need to be a player to run this command!"
+
+notConsole: "&e[&cStreaming Things&e] &cYou need to be Console to run this command"
+
+chatMuted: false
+
+timer: false

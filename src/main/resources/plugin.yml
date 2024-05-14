@@ -1,0 +1,20 @@
+name: StreamingThings
+version: 1.0
+main: StreamingThings
+api-version: 1.20
+author: hicupalot
+
+commands:
+  Timer:
+    description: Starts a timer
+    aliases: [starttimer, timerstart]
+  coinflip:
+    description: Flips a coin
+    aliases: [headsortails, flipcoin]
+  permissions:
+    streamingthings.staff:
+      descritpion: 'Allows Access To Staff Commands'
+      default: op
+    streamingthings.admin:
+      descritpion: 'Allows access to Admin Commands'
+      default: op
