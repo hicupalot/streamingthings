@@ -11,6 +11,12 @@ commands:
   coinflip:
     description: Flips a coin
     aliases: [headsortails, flipcoin]
+  StopTimer:
+    description: Stops the running timer
+    aliases: [timerstop, stopcurrenttimer, canceltimer, timercancel]
+  PlayerRaffle:
+    description: Chooses a player at random
+    aliases: [ raffle, randomplayer ]
   permissions:
     streamingthings.staff:
       descritpion: 'Allows Access To Staff Commands'

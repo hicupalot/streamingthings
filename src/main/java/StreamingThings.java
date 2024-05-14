@@ -15,6 +15,8 @@ public final class StreamingThings extends JavaPlugin {
         saveDefaultConfig();
         getCommand("timer").setExecutor(new Timer());
         getCommand("coinflip").setExecutor(new CoinFlip());
+        getCommand("StopTimer").setExecutor(new StopTimer());
+        getCommand("PlayerRaffle").setExecutor(new PlayerRaffle());
 
     }
     @Override
