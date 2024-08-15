@@ -31,6 +31,8 @@ public class randomTp implements CommandExecutor {
         List<? extends Player> playerList = Bukkit.getOnlinePlayers().stream().toList();
         Player randomTpAnswer = playerList.get(randomPlayer);
         ((Player) sender).teleport(randomTpAnswer);
+        String successfulTp = ChatColor.translateAlternateColorCodes('&',generalPrefix+"&c You have successfully teleported to "+ randomTpAnswer.getDisplayName());
+        sender.sendMessage(successfulTp);
         return true;
     }
 }
