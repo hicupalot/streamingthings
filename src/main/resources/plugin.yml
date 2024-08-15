@@ -17,6 +17,9 @@ commands:
   PlayerRaffle:
     description: Chooses a player at random
     aliases: [ raffle, randomplayer ]
+  randomtp:
+    description: Teleports you to a random player
+    aliases: [tprandom, rtp]
   permissions:
     streamingthings.staff:
       descritpion: 'Allows Access To Staff Commands'

@@ -16,7 +16,7 @@ public class StopTimer implements CommandExecutor {
             return false;
         }
         if (!sender.hasPermission("streamingthings.admin")) {
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&',config.getString("notPlayer")));
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&',config.getString("notAdmin")));
             return false;
         }
         if (args.length > 0) {
