@@ -9,6 +9,7 @@ import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Timer implements CommandExecutor, TabCompleter {
     int time;
@@ -41,7 +42,7 @@ public class Timer implements CommandExecutor, TabCompleter {
             return false;
         }
         time = Integer.parseInt(args[0]);
-        config.set("timer", true);
+        config.set("timer", Optional.of(true));
         StreamingThings.getInstance().saveConfig();
         Bukkit.getScheduler().runTaskTimer(StreamingThings.getInstance(), new Runnable() {
             //------------------------------------------------------------------------------//
@@ -56,7 +57,7 @@ public class Timer implements CommandExecutor, TabCompleter {
                 if (time == 0) {
                     Bukkit.getScheduler().cancelTasks(StreamingThings.getInstance());
                     Bukkit.broadcastMessage(generalPrefix+ ChatColor.YELLOW+ "The Timer Is Up!");
-                    config.set("timer",false);
+                    config.set("timer", Optional.of(false));
                     StreamingThings.getInstance().saveConfig();
                     return;
                 }

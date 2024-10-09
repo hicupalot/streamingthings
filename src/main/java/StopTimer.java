@@ -6,6 +6,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
+import java.util.Optional;
+
 public class StopTimer implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -33,7 +35,7 @@ public class StopTimer implements CommandExecutor {
         String cancelAnnounce = ChatColor.translateAlternateColorCodes('&',"&e[&c&lSmidge&r&e] "+"&cThe current timer was cancelled by "+
                 sender.getName());
         sender.sendMessage(cancelled);
-        config.set("timer",false);
+        config.set("timer", Optional.of(false));
         StreamingThings.getInstance().saveConfig();
         for (Player player : Bukkit.getOnlinePlayers()){
             if (player!=sender){
